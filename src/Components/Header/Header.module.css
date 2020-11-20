@@ -1,0 +1,19 @@
+.header{
+    background: #3c6e9f;
+    grid-area: header;
+
+}
+.page_Header_inner{
+    display: flex;
+}
+.page_Header_inner_logo img{
+    width: 37px;
+    height: 37px;
+    margin-left: 190px;
+    margin-top: 5px;
+}
+/*.fixed{*/
+/*    position: fixed;*/
+/*}*/
+
+

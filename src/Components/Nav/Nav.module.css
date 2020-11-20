@@ -1,0 +1,31 @@
+.nav_grid{
+    grid-area: nav;
+    width: 100%;
+    margin-left: 130px;
+    box-sizing: border-box;
+    padding: 15px 10px 5px 20px;
+}
+.nav_wrap_list{
+    /*height: 100%;*/
+    box-sizing: border-box;
+}
+ul li{
+    list-style-type: none;
+    margin: 7px;
+}
+.nav_wrap_list a{
+    text-decoration:none;
+    color: #345f88;
+}
+.nav_wrap_list a:hover{
+    /*color: #112b43;*/
+    margin-left: 15px;
+    transition: .5s;
+    font-weight: 600;
+}
+.nav_wrap_list a:active {
+    color: #031b30;
+
+
+
+}

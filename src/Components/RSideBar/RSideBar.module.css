@@ -1,0 +1,18 @@
+.rside_grid{
+    grid-area: RsideBar;
+    /*background-color: #e28888;*/
+    width: 100%;
+    padding: 15px 20px 5px 10px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+.rside_wrap_list{
+    box-sizing: border-box;
+    border: 1px solid #abb4c8;
+    border-radius: 5px;
+
+    height: 150px;
+    background: #ffffff;
+
+}
