@@ -20,7 +20,7 @@ let state = {
         info:{
             name:'Олег',
             surname:'Гуляев',
-            date:'1991-6-23',
+            date:'1991-06-23',
             country:'Россия',
             city:'Нижний Новгород'
         }

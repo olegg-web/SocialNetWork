@@ -8,17 +8,20 @@ const Profile = (props) => {
 
     }
     const age = () => {
-        let num = countDate();
+        const num = countDate();
         let lastNum = num.toString().split('').pop();
 
         if (lastNum === '1') {
             return 'год'
-        }else if(lastNum === '2' || lastNum === '3' || lastNum === '4'){
+        } else if (lastNum === '2' || lastNum === '3' || lastNum === '4') {
             return 'года'
-        }else if(lastNum === '5' || lastNum === '6' || lastNum === '7' || lastNum === '8' || lastNum === '9' || lastNum === '0'){
+        } else {
             return 'лет'
         }
-
+    }
+    const normText = () => {
+        let text = props.userInfo.info.date;
+        return text = text.replace(/-/g, '.')
     }
     return (
         <div className={classes.profile_flex}>
@@ -41,18 +44,38 @@ const Profile = (props) => {
 
             <div className={classes.rigth}>
                 <div className={classes.profile_info}>
-                    {/*{console.log(props.userInfo.name)}*/}
-
 
                     <div className={classes.nameUserName}>{props.userInfo.info.name} {props.userInfo.info.surname}</div>
-                    <div>Дата рождения {props.userInfo.info.date} ({countDate()}) {age()}
+                    <input type="text" className={classes.status} defaultValue='изменить статус'/>
+                    <hr className={classes.a}/>
+                    <div className={classes.aligndate}>
+                        <div className={classes.date}> Дата рождения:</div>
+                        <div className={classes.dateAge}>{normText()} ({countDate()}) {age()}</div>
                     </div>
-                    <div>{props.userInfo.info.country}</div>
-                    <div> {props.userInfo.info.city}</div>
+
+
+                    <div className={classes.aligncountry}>
+                        <div className={classes.country}>Страна:</div>
+                        <div className={classes.mycountry}>{props.userInfo.info.country}</div>
+                    </div>
+
+                    <div className={classes.aligncity}>
+                        <div className={classes.city}>Город:</div>
+                        <div className={classes.mycity}>{props.userInfo.info.city}</div>
+                    </div>
+
 
                 </div>
                 <div className={classes.profile_content}>
-                    новости
+                    <div><input type="text" className={classes.addComm} defaultValue='Написать комментарий'/>
+                        <button className={classes.btn}>Добавить</button>
+                    </div>
+                    <hr className={classes.a}/>
+                    <div className={classes.posts}>
+dhdhdfhdfhbr    <br/>
+                        dhdhdfhdfhbr    <br/>dhdhdfhdfhbr    <br/>
+                    </div>
+
                 </div>
 
             </div>
