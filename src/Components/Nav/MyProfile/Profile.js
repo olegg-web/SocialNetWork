@@ -1,5 +1,7 @@
 import React from 'react'
 import classes from './Profile.module.css'
+import MyPost from '../MyProfile/MyPost/MyPost'
+// import ProfilInfo from '../MyProfile/ProfilInfo/ProfilInfo'
 
 const Profile = (props) => {
 
@@ -21,7 +23,7 @@ const Profile = (props) => {
     }
     const normText = () => {
         let text = props.userInfo.info.date;
-        return text = text.replace(/-/g, '.')
+        return text.replace(/-/g, '.')
     }
     return (
         <div className={classes.profile_flex}>
@@ -50,7 +52,8 @@ const Profile = (props) => {
                     <hr className={classes.a}/>
                     <div className={classes.aligndate}>
                         <div className={classes.date}> Дата рождения:</div>
-                        <div className={classes.dateAge}>{normText()} ({countDate()}) {age()}</div>
+                        <div className={classes.dateAge}>{normText()} <span
+                            className={classes.age_block}>{countDate()} {age()}</span></div>
                     </div>
 
 
@@ -66,15 +69,15 @@ const Profile = (props) => {
 
 
                 </div>
+
                 <div className={classes.profile_content}>
-                    <div><input type="text" className={classes.addComm} defaultValue='Написать комментарий'/>
-                        <button className={classes.btn}>Добавить</button>
-                    </div>
-                    <hr className={classes.a}/>
-                    <div className={classes.posts}>
-dhdhdfhdfhbr    <br/>
-                        dhdhdfhdfhbr    <br/>dhdhdfhdfhbr    <br/>
-                    </div>
+
+                    <MyPost inpValue={props.postState.newPostText}
+                            comments={props.postState.postData}/>
+
+
+                    {/*<div className={classes.posts}>*/}
+                    {/*</div>*/}
 
                 </div>
 

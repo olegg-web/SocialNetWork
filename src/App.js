@@ -12,6 +12,7 @@ import Friends from "./Components/Nav/MyFriends/Friends";
 import Groups from "./Components/Nav/Groups/Groups";
 import News from "./Components/Nav/News/News";
 
+
 import {BrowserRouter,Route} from "react-router-dom";
 
 function App(props) {
@@ -27,7 +28,7 @@ function App(props) {
                 <Nav navLink={props.state.navLink}/>
                 <div className={classes.mainBlock_route}>
                     <div className={classes.main_wrap_list}>
-                        <Route path='/profile' render = {()=><Profile userInfo={props.state.user}/>}/>
+                        <Route path='/profile' render = {()=><Profile userInfo={props.state.user} postState={props.state.post}/>}/>
                         <Route path='/friends' render = {()=><Friends />}/>
                         <Route path='/message' render = {()=><Message />}/>
                         <Route path='/music' render = {()=><Music />}/>
