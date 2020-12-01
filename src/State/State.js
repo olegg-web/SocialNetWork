@@ -1,4 +1,5 @@
 import React from "react";
+import {renderEntire} from "../Render";
 
 let state = {
     text: 'group',
@@ -21,37 +22,41 @@ let state = {
             surname: 'Гуляев',
             date: '1991-06-23',
             country: 'Россия',
-            city: 'Нижний Новгород'
+            city: 'Нижний Новгород',
+            study:'Вычислительные машины, комплексы, системы и сети',
+            work:'ННИИРТ',
+            hobbies:'футбол, волейбол, лёгкая атлетика, тяжёлая атлетика, музыка, программирование',
+            education:null
         }
 
     },
     post:{
         postData: [
             {
-                id: 1,
-                message: 'Hi,how are you?',
-                likeCount: 2,
+                id: 4,
+                message: 'Привет! Если у тебя хорошее настроение, то ставь лайк!',
+                likesCount: 2,
                 img: 'https://avatarko.ru/img/kartinka/1/avatarko_anonim.jpg',
                 userNameInComments: "Иван Царевич",
             },
             {
-                id: 2,
-                message: 'Its my first post',
-                likeCount: 12,
+                id: 3,
+                message: 'го дружить!',
+                likesCount: 12,
                 img: 'https://i.pinimg.com/originals/76/6c/f7/766cf770ea8dd3529bd8e0c41d6784be.jpg',
                 userNameInComments:"Александр Бородач",
             },
             {
-                id: 3,
-                message: 'Hello world',
-                likeCount: 32,
+                id: 2,
+                message: 'Не лает, не кусает, а в дом не пускает, кто это?',
+                likesCount: 32,
                 img: 'https://www.sunhome.ru/i/wallpapers/61/pozitivnie-kartinki.orig.jpg',
                 userNameInComments:"Артём Дзюба",
             },
             {
-                id: 4,
-                message: 'What is you name?',
-                likeCount: 68,
+                id: 1,
+                message: 'Не могу представить себе событие в мире, после которого не упал бы курс рубля.',
+                likesCount: 68,
                 img: 'https://www.meme-arsenal.com/memes/50569ac974c29121ff9075e45a334942.jpg',
                 userNameInComments:"Илья Муромец",
             },
@@ -60,5 +65,17 @@ let state = {
 
     }
 }
+ export let addPost = (postMessage)=>{
+    let newPost ={
+        id:5,
+        message:postMessage,
+        likesCount:0,
+        img:state.user.avatar,
+        userNameInComments:state.user.info.name +' '+ state.user.info.surname,
+    }
+    state.post.postData.unshift(newPost);
+     renderEntire(state);
+}
+
 
 export default state

@@ -16,9 +16,7 @@ import News from "./Components/Nav/News/News";
 import {BrowserRouter,Route} from "react-router-dom";
 
 function App(props) {
-    // function  aaa(){
-    //
-    // }
+
     return (
         <BrowserRouter>
         <div className={classes.App}>
@@ -28,7 +26,10 @@ function App(props) {
                 <Nav navLink={props.state.navLink}/>
                 <div className={classes.mainBlock_route}>
                     <div className={classes.main_wrap_list}>
-                        <Route path='/profile' render = {()=><Profile userInfo={props.state.user} postState={props.state.post}/>}/>
+                        <Route path='/profile' render = {()=><Profile userInfo={props.state.user}
+                                                                      postState={props.state.post}
+                                                                      addPost={props.addPost}
+                                                                      addLike={props.addLike}/>}/>
                         <Route path='/friends' render = {()=><Friends />}/>
                         <Route path='/message' render = {()=><Message />}/>
                         <Route path='/music' render = {()=><Music />}/>
@@ -40,7 +41,7 @@ function App(props) {
 
                     </div>
                 </div>
-                <RSideBar/>
+                {/*<RSideBar/>*/}
             </div>
         </div>
         </BrowserRouter>
