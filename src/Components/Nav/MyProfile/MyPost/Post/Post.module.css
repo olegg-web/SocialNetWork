@@ -34,16 +34,19 @@ color: #031b30;
     overflow: hidden;
     /*object-fit: cover;*/
 }
-.like2{
+.like:hover{
     background-image: url("like1.png");
-    width: 22px;
-    margin-left: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-    overflow: hidden;
-    /*object-fit: cover;*/
 }
+/*.like2{*/
+/*    background-image: url("like1.png");*/
+/*    width: 22px;*/
+/*    margin-left: 10px;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    cursor: pointer;*/
+/*    overflow: hidden;*/
+/*    !*object-fit: cover;*!*/
+/*}*/
 .countLikes{
     display: flex;
     padding: 10px 0 5px 0;
