@@ -2,7 +2,8 @@ import React from 'react'
 import classes from './Profile.module.css'
 import MyPost from '../MyProfile/MyPost/MyPost'
 import OtherInfo from  './OtherInfo/OtherInfo'
-{/* import ProfilInfo from '../MyProfile/ProfilInfo/ProfilInfo'*/}
+import FriendsMini from "./ProfilInfo/FriendsMini/FriendsMini";
+
 
 class Profile extends React.Component {
     constructor(props) {
@@ -52,9 +53,18 @@ class Profile extends React.Component {
 
                 }
             }
+            let elementFriendMini = this.props.friends.map((el,index)=>
+                <FriendsMini name={el.name} surname={el.surname} ava={el.ava} statusUser={el.statusUser} key={index} />)
 
+           let numFriends = this.props.friends.length
 
-            return (
+            let numOnline = this.props.friends.filter(item=>{
+                if(item.statusUser){
+                     return true
+                 }
+
+            })
+                     return (
                 <div className={classes.profile_flex}>
 
                     <div className={classes.left}>
@@ -66,7 +76,16 @@ class Profile extends React.Component {
                             <div className={classes.ava_button}>редактировать</div>
                         </div>
 
-                        <div className={classes.profile_friends}>friends</div>
+                        <div className={classes.profile_friends} >
+                            <div className={classes.info_friends}>Друзья <span className={classes.numFriends}>{numFriends}</span> </div>
+
+                            <div className={classes.profile_friends_mini}>{elementFriendMini}</div>
+
+                        </div>
+                        <div className={classes.profile_friends_num_online}>
+                            <div className={classes.profile_friends_num_online_text}>Друзья онлайн {numOnline.length}</div>
+                            <div className={classes.profile_friends_num_online_icon}>ыавыаыва</div>
+                        </div>
                         <div className={classes.profile_subscriptions}>subscriptions</div>
                         <div className={classes.profile_album}>album</div>
                         <div className={classes.profile_videos}>videos</div>
@@ -84,7 +103,7 @@ class Profile extends React.Component {
                                 <div className={classes.date}> Дата рождения:</div>
                                 <div className={classes.dateAge}>{normText()}
                                      <span
-                                    className={classes.age_block}>{countDate()}{age()}</span></div>
+                                    className={classes.age_block}>{`${countDate()} ${age()}`}</span></div>
                             </div>
 
 

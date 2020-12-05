@@ -17,10 +17,9 @@ const MyPost = (props) => {
     return (
         <div>
             <div><textarea name="textArea" id="ta" cols="60" rows="2"
-                          ref={newAddPost}
-            /></div>
+                          ref={newAddPost}/></div>
             <button className={classes.btn} onClick={addPost}>добавить</button>
-            <div>Все записи</div>
+            <div className={classes.text}>Все записи</div>
             <hr className={classes.hr}/>
             {postElements}
         </div>

@@ -1,0 +1,29 @@
+.every_friend{
+    width: 100%;
+    height: 105px;
+    border: solid 1px #cccdcf;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+.every_friend:hover{
+    background: #dde1e9;
+}
+.photo_friend img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover
+
+}
+.name_friend{
+    margin: 10px 20px;
+    font-weight: 600;
+}
+.status_friend{
+    position: absolute;
+    right: 30px;
+    margin-top: 10px;
+}

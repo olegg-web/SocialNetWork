@@ -29,8 +29,9 @@ function App(props) {
                         <Route path='/profile' render = {()=><Profile userInfo={props.state.user}
                                                                       postState={props.state.post}
                                                                       addPost={props.addPost}
-                                                                      addLike={props.addLike}/>}/>
-                        <Route path='/friends' render = {()=><Friends />}/>
+                                                                      addLike={props.addLike}
+                                                                      friends={props.state.user.friends}/>}/>
+                        <Route path='/friends' render = {()=><Friends friends={props.state.user.friends}/>}/>
                         <Route path='/message' render = {()=><Message />}/>
                         <Route path='/music' render = {()=><Music />}/>
                         <Route path='/photo' render = {()=><Photo />}/>
@@ -41,7 +42,6 @@ function App(props) {
 
                     </div>
                 </div>
-                {/*<RSideBar/>*/}
             </div>
         </div>
         </BrowserRouter>
