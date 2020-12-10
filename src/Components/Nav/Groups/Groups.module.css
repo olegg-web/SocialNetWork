@@ -1,21 +1,8 @@
-.friens{
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.friens_block_left_block{
-    border: solid 1px #cccdcf;
+.Groups{
     width: 550px;
     height: 100%;
-    background: white;
-}
-.friens_block_rigth_block{
-    border: solid 1px #cccdcf;
-    width: 230px;
-    height: 200px;
-    background: white;
-    margin-left: 10px;
+    background:white;
+    border: 1px solid #cccdcf;
 }
 .inp input{
     width: 550px;
@@ -30,5 +17,4 @@
 }
 .inp input:hover {
     background: #dde1e9;
-
 }

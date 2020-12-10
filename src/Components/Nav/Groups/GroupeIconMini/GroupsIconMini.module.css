@@ -1,0 +1,23 @@
+.blockGroupMini{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.ava_group img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50% ;
+}
+.blockMiniTwo{
+    padding-left: 10px;
+}
+.name_group{
+    font-size: 12.5px;
+}
+.category_group{
+    font-size: 12px;
+    color: #656565;
+}

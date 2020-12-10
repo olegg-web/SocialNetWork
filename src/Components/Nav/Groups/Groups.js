@@ -1,13 +1,19 @@
 import React from 'react'
-// import classes from './RSideBar.module.css'
+import classes from './Groups.module.css'
+import MyGroup from '../Groups/MyGroup/MyGroup'
 
 const Groups =(props)=>{
-// console.log(props.appState.text)
+    const elementGroup = props.groups.map((el,index)=>
+        <MyGroup name={el.name} ava={el.ava} category={el.category} number={el.num} key={index}/>)
+
     return(
 
-        <div>
-            {props.text}
+        <div className={classes.Groups}>
 
+            <div>
+                <div className={classes.inp}><input type="text" defaultValue='Поиск сообществ'/></div>
+                {elementGroup}
+            </div>
 
         </div>
     )

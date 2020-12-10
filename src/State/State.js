@@ -2,7 +2,6 @@ import React from "react";
 import {renderEntire} from "../Render";
 
 let state = {
-    text: 'group',
     navLink: [
         {id: 1, headline: 'Моя страница', link: "/profile"},
         {id: 2, headline: 'Друзья', link: "/friends"},
@@ -11,7 +10,7 @@ let state = {
         {id: 5, headline: 'Фотографии', link: "/photo"},
         {id: 6, headline: 'Видео', link: "/video"},
         {id: 7, headline: 'Новости', link: "/news"},
-        {id: 8, headline: 'Группы', link: "/group"},
+        {id: 8, headline: 'Сообщества', link: "/group"},
 
     ],
 
@@ -25,7 +24,7 @@ let state = {
             city: 'Нижний Новгород',
             study:'Вычислительные машины, комплексы, системы и сети',
             work:'ННИИРТ',
-            hobbies:'футбол, волейбол, лёгкая атлетика, тяжёлая атлетика, музыка, программирование',
+            hobbies:'футбол, волейбол, хоккей, плавание, музыка, программирование',
             education:null
         },
         friends:[
@@ -45,11 +44,22 @@ let state = {
             {id:14,name:'Иван',surname:'Дорн',ava:"https://sun9-66.userapi.com/impf/B4dGGfwPO3MOBpUciX79eWY4NWKp9mIuOgMFNg/iosfQnkJxG4.jpg?size=200x0&quality=96&crop=398,80,1755,1755&sign=b070e92addf4d8d4cf7c9754731ea48b&ava=1",statusUser:true},
             {id:15,name:'Алексей',surname:'Светлаков',ava:"https://sun9-22.userapi.com/impf/c627720/v627720331/2816c/KH6sp5oBIIw.jpg?size=200x0&quality=96&crop=0,0,1080,1350&sign=960c49414d69d7685706d20df3873b04&ava=1",statusUser:false}
 
-        ]
+        ],
+        groups:[
+            {id:1,name:'Нижний Новгород',ava:"https://sun9-25.userapi.com/impf/c851528/v851528608/f1e20/XvyltRVjW_M.jpg?size=100x0&quality=96&crop=0,93,352,352&sign=976f9df2f0dce0a3795bfec6918fe065&ava=1",category:'Гороское сообщество',num:'294684'},
+            {id:2,name:'MDK',ava:'https://sun9-70.userapi.com/impg/eB0Xi9njHitRclNtiTvAaMhYzoiB0FvPEMO6GA/tPt8DezF_fs.jpg?size=100x0&quality=96&crop=576,72,828,828&sign=0b6c7600cb09d5d0c244dae0c73ba587&ava=1',category:'Юмор',num:'11600543'},
+            {id:3,name:'Знаете ли Вы?',ava:"https://sun9-29.userapi.com/impf/c627416/v627416340/23ca3/HNjwgKh9zV8.jpg?size=100x0&quality=96&crop=20,20,460,460&sign=0ccca748ab3497a33638653cc0d0a06b&ava=1",category:'Новости',num:'5467856'},
+            {id:4,name:'MARVEL/DC',ava:"https://sun9-36.userapi.com/impf/c830208/v830208383/1cb995/M8FxewuASwU.jpg?size=100x0&quality=96&crop=10,10,2150,2150&sign=10ca6f50d5db84e1d8490f01fae10b17&ava=1",category:'Кино',num:'3684478'},
+            {id:5,name:'ITc | сообщество программистов',ava:"https://sun9-34.userapi.com/impf/c633717/v633717934/2f900/rCqD4SsC06k.jpg?size=100x0&quality=96&crop=246,263,1181,1181&sign=f289a7d25c254606cc577a311dc3574b&ava=1",category:'Программирование',num:'386841'},
+            {id:6,name:'Наука и Техника',ava:"https://sun9-20.userapi.com/impf/c858436/v858436447/84126/FckTPQValjY.jpg?size=100x0&quality=96&crop=77,68,830,830&sign=6317a407c16e017bfdc2063aea4ac09a&ava=1",category:'Наука',num:'4847363'},
+            {id:7,name:'Высокие технологии',ava:"https://sun9-41.userapi.com/impf/c837737/v837737440/319f6/5LYo-62xWBw.jpg?size=100x0&quality=96&crop=0,63,469,469&sign=1f1bea5b6c6cc790e04f2c5686835492&ava=1",category:'Наука',num:'386368'},
+            {id:8,name:'Библиотека программиста',ava:"https://sun9-16.userapi.com/impf/c858132/v858132625/be932/AYLhLtwcWxY.jpg?size=100x0&quality=96&crop=122,13,1090,1090&sign=3f1ecd5677f5946deb341351ceb07b35&ava=1",category:'Программирование',num:'360734'},
+            {id:9,name:'WebDesign Master',ava:"https://sun9-14.userapi.com/impf/c852132/v852132713/148604/yVuiwtvTBLA.jpg?size=100x0&quality=96&crop=1161,513,240,240&sign=14b4b8f5dbbc0ad816ba8b149b563cdd&ava=1",category:'',num:'21467'},
+            {id:10,name:'RECORD',ava:"https://sun9-21.userapi.com/impg/c854216/v854216185/253171/2TVCdWlySSE.jpg?size=100x0&quality=96&crop=199,202,661,661&sign=eaca3f58e76bbc6256a67c6285472586&ava=1",category:'Танцевальная музыка',num:'4467845'},
 
-
-
+        ] ,
     },
+
     post:{
         postData: [
             {
@@ -85,16 +95,21 @@ let state = {
 
     }
 }
- export let addPost = (postMessage)=>{
+ export let addPost = ()=>{
     let newPost ={
         id:5,
-        message:postMessage,
+        message:state.post.newPostText,
         likesCount:0,
         img:state.user.avatar,
         userNameInComments:state.user.info.name +' '+ state.user.info.surname,
     }
     state.post.postData.unshift(newPost);
      renderEntire(state);
+}
+export let updateNewPost = (newText)=>{
+
+    state.post.newPostText = newText;
+    renderEntire(state);
 }
 
 

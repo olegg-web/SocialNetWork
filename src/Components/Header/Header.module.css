@@ -1,19 +1,22 @@
 .header{
-    background: #3c6e9f;
+    background: #3E6FA1;
     grid-area: header;
-
+    position: relative;
 }
 .page_Header_inner{
     display: flex;
 }
 .page_Header_inner_logo img{
-    width: 37px;
-    height: 37px;
-    margin-left: 190px;
+    width: 45px;
+    height: 45px;
+    margin-left: 290px;
     margin-top: 5px;
 }
-/*.fixed{*/
-/*    position: fixed;*/
-/*}*/
+.fixed{
+    position: fixed;
+    background: #3E6FA1;
+    width: 100%;
+
+}
 
 

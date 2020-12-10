@@ -9,15 +9,37 @@ const MyPost = (props) => {
     )
     let newAddPost = React.createRef()
 
+
     const addPost=()=>{
-        let text = newAddPost.current.value
-        props.addPost(text)
-        newAddPost.current.value = '';
+        props.addPost()
+        props.updateNewPost('')
+
+        // newAddPost.current.value = '';
     }
+    let onPostChange=()=>{
+        let text = newAddPost.current.value
+        props.updateNewPost(text)
+
+
+    }
+    let clickOnText=()=>{
+        props.updateNewPost('')
+    }
+
+    // if(clickOnText){
+    //     clickOnText()
+    // }else{
+    //     alert('hi')
+    // }
+
     return (
         <div>
             <div><textarea name="textArea" id="ta" cols="60" rows="2"
-                          ref={newAddPost}/></div>
+                          ref={newAddPost} onChange={onPostChange}
+                            value={props.newPostText}
+                            onClick={clickOnText}
+                />
+            </div>
             <button className={classes.btn} onClick={addPost}>добавить</button>
             <div className={classes.text}>Все записи</div>
             <hr className={classes.hr}/>

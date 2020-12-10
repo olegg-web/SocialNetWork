@@ -27,17 +27,20 @@ function App(props) {
                 <div className={classes.mainBlock_route}>
                     <div className={classes.main_wrap_list}>
                         <Route path='/profile' render = {()=><Profile userInfo={props.state.user}
+                                                                      newPostText={props.state.post.newPostText}
                                                                       postState={props.state.post}
                                                                       addPost={props.addPost}
+                                                                      updateNewPost={props.updateNewPost}
                                                                       addLike={props.addLike}
-                                                                      friends={props.state.user.friends}/>}/>
+                                                                      friends={props.state.user.friends}
+                                                                      groups={props.state.user.groups}/>}/>
                         <Route path='/friends' render = {()=><Friends friends={props.state.user.friends}/>}/>
                         <Route path='/message' render = {()=><Message />}/>
                         <Route path='/music' render = {()=><Music />}/>
                         <Route path='/photo' render = {()=><Photo />}/>
                         <Route path='/video' render = {()=><Video />}/>
                         <Route path='/news' render = {()=><News />}/>
-                        <Route path='/group' render = {()=><Groups text={props.state.text}/>}/>
+                        <Route path='/group' render = {()=><Groups groups={props.state.user.groups}/>}/>
                         {/*<Route path='/group' component = {Groups}/>*/}
 
                     </div>

@@ -10,9 +10,10 @@ const MyFriend = (props) => {
     return (
         <div className={classes.every_friend}>
             <div className={classes.photo_friend}>
-                <img
+                <a href=""><img
                     src={props.ava}
-                    alt=""/>
+                    alt=""/></a>
+
             </div>
             <div className={classes.name_friend}>
                 {props.name} {props.surname}
