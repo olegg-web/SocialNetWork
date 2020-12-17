@@ -57,7 +57,7 @@ class Profile extends React.Component {
                             hobbies={this.props.userInfo.info.hobbies}
                             education={this.props.userInfo.info.education}/>
                 })
-            } else if (this.state.textStart === 'Скрыть подробную информацию') {
+            } if (this.state.textStart === 'Скрыть подробную информацию') {
                 this.setState({textStart: 'Показать подробная информация', showBlock: null})
 
             }

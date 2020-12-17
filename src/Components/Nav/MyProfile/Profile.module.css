@@ -67,7 +67,7 @@
     background: white;
     box-sizing: border-box;
     border: solid 1px #cccdcf;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     /*position: relative;*/
 }
 
@@ -234,7 +234,7 @@
 
 .arrowDown {
     width: 100%;
-    height: 35px;
+    height: 34px;
     margin-top: 7px;
     font-size: 14px;
     display: flex;
@@ -246,6 +246,7 @@
 .arrowDown:hover {
     background: #e8ebf1;
     transition: .6s;
+
 }
 
 .arrowDown:active {

@@ -1,12 +1,12 @@
 .info {
     height: 100%;
-    width: 466px;
+    width: 468px;
     background: white;
     border-left: solid 1px #cccdcf;
     border-right: solid 1px #cccdcf;
     border-bottom: solid 1px #cccdcf;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
 
 }
 .info_person {
