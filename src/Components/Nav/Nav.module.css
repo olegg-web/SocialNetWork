@@ -20,7 +20,7 @@ ul li{
 .nav_wrap_list li a:hover{
     /*color: #112b43;*/
     margin-left: 7px;
-    transition: .6s;
+    transition: .2s;
     font-weight: 600;
 }
 .nav_wrap_list a:active {

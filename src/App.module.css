@@ -3,13 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 
-    font-family: 'IBM Plex Sans', sans-serif;
+    /*font-family: 'IBM Plex Sans', sans-serif;*/
 }
 .grid{
   overflow-x:hidden;
   height: 100vh;
 display: grid;
-    background: #EDEEF0;
+    background: #EDEDED;
 
     margin: 0 auto;
   grid-template-areas:

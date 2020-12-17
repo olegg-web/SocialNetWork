@@ -1,34 +1,32 @@
-.info{
+.info {
     height: 100%;
     width: 466px;
     background: white;
     border-left: solid 1px #cccdcf;
     border-right: solid 1px #cccdcf;
     border-bottom: solid 1px #cccdcf;
-    box-sizing:border-box;
-    /*padding:10px;*/
+    box-sizing: border-box;
+    border-radius: 10px;
+
 }
-/*.infoText{*/
-/*    padding: 15px;*/
-/*    font-size: 14px;*/
-/*}*/
-.info_study,.info_work,.info_hobbies,.info_education{
+.info_person {
     font-size: 13px;
     color: #676767;
     width: 120px;
     margin: 5px 0 5px 20px;
 }
-.wrap_info_study,.wrap_info_work,.wrap_info_hobbies,.wrap_info_education{
+
+.info_block,.info_block_hobbies {
     display: flex;
-    /*margin: 10px;*/
 }
-.div_info_study,.div_info_work,.div_info_hobbies,.div_info_education{
+
+.info_wrap {
     font-size: 14px;
     margin-left: 50px;
     width: 250px;
     padding-top: 5px;
 }
 
-.div_info_hobbies{
+.info_block_hobbies {
     margin-bottom: 10px;
 }

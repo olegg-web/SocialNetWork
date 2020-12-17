@@ -1,16 +1,16 @@
-.every_friend{
+.every_friend_block{
     width: 100%;
     height: 105px;
     border: solid 1px #cccdcf;
     padding: 10px 15px;
     box-sizing: border-box;
     display: flex;
-    position: relative;
+    /*position: relative;*/
 }
-.every_friend:hover{
+.every_friend_block:hover{
     background: #dde1e9;
 }
-.photo_friend img{
+.every_friend_block_photo img{
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -18,12 +18,14 @@
     object-fit: cover
 
 }
-.name_friend{
+.every_friend_block_name{
     margin: 10px 20px;
     font-weight: 600;
+    width: 300px;
 }
-.status_friend{
-    position: absolute;
-    right: 30px;
+.every_friend_block_name_status{
+    /*position: absolute;*/
+    /*right: 30px;*/
     margin-top: 10px;
+    margin-left: 10px;
 }

@@ -26,14 +26,15 @@ function App(props) {
                 <Nav navLink={props.state.navLink}/>
                 <div className={classes.mainBlock_route}>
                     <div className={classes.main_wrap_list}>
-                        <Route path='/profile' render = {()=><Profile userInfo={props.state.user}
-                                                                      newPostText={props.state.post.newPostText}
-                                                                      postState={props.state.post}
-                                                                      addPost={props.addPost}
-                                                                      updateNewPost={props.updateNewPost}
-                                                                      addLike={props.addLike}
-                                                                      friends={props.state.user.friends}
-                                                                      groups={props.state.user.groups}/>}/>
+                        <Route path='/profile' render = {()=>
+                            <Profile userInfo={props.state.user}
+                                     newPostText={props.state.post.newPostText}
+                                     postState={props.state.post}
+                                     addPost={props.addPost}
+                                     updateNewPost={props.updateNewPost}
+                                     addLike={props.addLike}
+                                     friends={props.state.user.friends}
+                                     groups={props.state.user.groups}/>}/>
                         <Route path='/friends' render = {()=><Friends friends={props.state.user.friends}/>}/>
                         <Route path='/message' render = {()=><Message />}/>
                         <Route path='/music' render = {()=><Music />}/>

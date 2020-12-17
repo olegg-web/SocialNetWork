@@ -1,14 +1,18 @@
 import React from 'react'
 import classes from './Header.module.css'
+import Clock from './Clock/Clock'
 
 const Header = () => {
     return (
 
             <div className={classes.header}>
-                <div className={classes.fixed}>
-                <div className={classes.page_Header_inner}>
-                    <div className={classes.page_Header_inner_logo}>
-                        <img src="img/iconfinder-vk.png" alt="logo"/>
+                <div className={classes.header_fixed}>
+                <div className={classes.header_page_inner}>
+                    <div className={classes.header_page_inner_logo}>
+                        <img src="img/message.png" alt="logo"/>
+                    </div>
+                    <div className={classes.clock}>
+                        <Clock/>
                     </div>
 
                 </div>

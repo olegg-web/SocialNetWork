@@ -107,7 +107,6 @@ let state = {
      renderEntire(state);
 }
 export let updateNewPost = (newText)=>{
-
     state.post.newPostText = newText;
     renderEntire(state);
 }

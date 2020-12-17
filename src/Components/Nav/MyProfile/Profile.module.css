@@ -1,115 +1,137 @@
 *:focus {
     outline: none;
 }
-.profile_flex{
+
+.profile_flex {
     display: flex;
     box-sizing: border-box;
 
 }
-.left{
+
+.leftBlock {
     width: 240px;
     left: 0;
 }
-.rigth{
+
+.rightBlock {
     width: 468px;
     right: 0;
 }
-.profile_ava{
+
+.profile_avatar {
     width: 230px;
-    height: 275px;
+    height: 265px;
     box-sizing: border-box;
     border: solid 1px #cccdcf;
     border-radius: 4px;
     background: white;
     padding: 10px;
     margin: 0 10px 10px 0;
-
 }
-.ava_user{
+
+.avatar_user {
     width: 200px;
     height: 200px;
     margin: 0 auto;
 }
-.ava_user img{
+
+.avatar_user img {
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 3px;
-    object-fit: cover
+    object-fit: cover;
+
 }
-.ava_button{
-    width: 120px;
-    height: 30px;
-    font-size: 12px;
-    background: #cbcccd;
-    border-radius: 5px;
-    border: #abb4c8 1px solid;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.avatar_user:hover{
+    transform: scale(1.07);
+    transition: .2s;
 }
-.profile_info{
+.avatar_button {
+    margin: 15px 10px 10px 170px;
+}
+.avatar_button a img{
+    width: 32px;
+    height: 32px;
+}
+.avatar_button a img:hover{
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    transition: .2s;
+
+}
+.profile_info {
     width: 100%;
     height: 225px;
     background: white;
     box-sizing: border-box;
     border: solid 1px #cccdcf;
-    /*border-radius: 4px;*/
+    border-radius: 10px;
     /*position: relative;*/
 }
-.status{
-    border:none;
-    width: 423px ;
+
+.status {
+    border: none;
+    width: 423px;
     cursor: pointer;
     margin: 10px 0 0 20px;
     color: #676767;
 }
-.status:hover{
+
+.status:hover {
     background: #e8ebf1;
 }
-.nameUserName{
+
+.nameUserName {
     font-weight: 600;
     margin: 15px 0 0 25px;
     font-size: 20px;
 }
 
-.aligndate{
+.data {
     display: flex;
-    margin: 20px 0  0 20px;
+    margin: 20px 0 0 20px;
 }
-.date{
+
+.date_block {
     width: 120px;
     font-size: 13px;
     color: #676767;
 }
-.dateAge{
+
+.date_age {
     font-size: 14px;
     margin-left: 50px;
 }
-.age_block{
+
+.data_age_block {
     margin-left: 30px;
 }
-.aligncountry{
+
+.country {
     display: flex;
     margin-top: 10px;
 }
-.country,.city{
+
+.block_country_city_block{
     margin: 10px 0 0 20px;
     font-size: 13px;
     width: 120px;
     color: #676767;
 }
-.mycountry,.mycity{
+
+.block_country_city_wrap {
     font-size: 14px;
     margin-left: 50px;
     width: 250px;
 }
 
-.aligncity{
+.city {
     display: flex;
 }
-.profile_content{
+
+.profile_content {
     width: 100%;
     height: auto;
     /*background: blueviolet;*/
@@ -118,7 +140,8 @@
     background: white;
     margin-top: 10px;
 }
-.info_friends{
+
+.info_friends {
     width: 100%;
     height: 25px;
     padding-left: 10px;
@@ -128,31 +151,36 @@
     align-items: center;
     margin-bottom: 10px;
 }
-.numFriends{
+
+.numFriends {
     color: #939393;
     padding-left: 5px;
 }
-.profile_friends{
+
+.profile_friends {
     height: 190px;
     width: 230px;
     border: solid 1px #cccdcf;
     /*border-radius: 4px;*/
     background: white;
-    margin-right:10px;
+    margin-right: 10px;
     border-bottom: none;
     overflow: hidden;
 }
-.profile_friends_mini{
+
+.profile_friends_mini_block {
     display: flex;
     flex-wrap: wrap;
-    padding: 7px 7px 0 7px ;
+    padding: 7px 7px 0 7px;
     box-sizing: border-box;
 }
-.profile_friends_mini2{
+
+.profile_friends_mini2 {
     display: flex;
     flex-wrap: wrap;
 }
-.profile_friends_num_online{
+
+.profile_friends_num_online {
     /*height: 185px;*/
     width: 230px;
     border: solid 1px #cccdcf;
@@ -162,13 +190,15 @@
     overflow: hidden;
 
 }
-.profile_friends_num_online_text{
+
+.profile_friends_num_online_text {
     border-bottom: solid 1px #cccdcf;
     font-size: 12px;
     padding: 5px 0 5px 10px;
 
 }
-.profile_group{
+
+.profile_group {
     height: 290px;
     width: 230px;
     border: solid 1px #cccdcf;
@@ -178,7 +208,8 @@
     overflow: hidden;
     /*padding: 0px 10px 10px 10px;*/
 }
-.profile_album{
+
+.profile_album {
     height: 150px;
     width: 230px;
     border: solid 1px #cccdcf;
@@ -187,7 +218,8 @@
     margin: 0 10px 10px 0;
 
 }
-.profile_videos{
+
+.profile_videos {
     height: 100px;
     width: 230px;
     border: solid 1px #cccdcf;
@@ -195,10 +227,12 @@
     background: white;
     margin: 0 10px 10px 0;
 }
-.hr{
+
+.hr {
     width: 426px;
 }
-.arrowDown{
+
+.arrowDown {
     width: 100%;
     height: 35px;
     margin-top: 7px;
@@ -208,11 +242,13 @@
     justify-content: center;
     cursor: pointer;
 }
-.arrowDown:hover{
-background: #e8ebf1;
+
+.arrowDown:hover {
+    background: #e8ebf1;
     transition: .6s;
 }
-.arrowDown:active{
+
+.arrowDown:active {
     background: #ffffff;
     transition: .6s;
 }

@@ -1,23 +1,23 @@
-.friens{
+.friends{
     display: flex;
     width: 100%;
     height: 100%;
 }
 
-.friens_block_left_block{
-    border: solid 1px #cccdcf;
+.friends_block_left{
+    /*border: solid 1px #cccdcf;*/
     width: 550px;
     height: 100%;
     background: white;
 }
-.friens_block_rigth_block{
+.friends_block_right{
     border: solid 1px #cccdcf;
     width: 230px;
     height: 200px;
     background: white;
     margin-left: 10px;
 }
-.inp input{
+.friends_block_left_input input{
     width: 550px;
     height: 30px;
     border-left: solid 1px #cccdcf;
@@ -28,7 +28,7 @@
     padding-left: 10px;
     box-sizing: border-box;
 }
-.inp input:hover {
-    background: #dde1e9;
+.friends_block_left_input input:hover {
+    background: #ebf5e4;
 
 }

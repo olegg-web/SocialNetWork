@@ -5,26 +5,26 @@
     padding: 10px 15px;
     box-sizing: border-box;
     display: flex;
-    position: relative;
+    /*position: relative;*/
     display: flex;
 
 }
 .every_group:hover {
     background: #dde1e9;
 }
-.photo_group img{
+.every_group_photo img{
     width: 80px;
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover
 }
-.name_group{
+.group_name{
     margin: 5px 20px;
     font-weight: 600;
     font-size: 13px;
 }
-.category_group,.number_group{
+.group_category,.group_number{
     color: #656565;
     font-size: 12.5px;
     margin: 2px 20px;

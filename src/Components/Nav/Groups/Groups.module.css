@@ -1,10 +1,10 @@
-.Groups{
+.groups{
     width: 550px;
     height: 100%;
     background:white;
     border: 1px solid #cccdcf;
 }
-.inp input{
+.group_search input{
     width: 550px;
     height: 30px;
     border-left: solid 1px #cccdcf;
@@ -15,6 +15,6 @@
     padding-left: 10px;
     box-sizing: border-box;
 }
-.inp input:hover {
+.group_search input:hover {
     background: #dde1e9;
 }

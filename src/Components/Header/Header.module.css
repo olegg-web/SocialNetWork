@@ -1,22 +1,27 @@
 .header{
-    background: #3E6FA1;
+    background: #00B956;
     grid-area: header;
     position: relative;
 }
-.page_Header_inner{
+.header_page_inner{
     display: flex;
 }
-.page_Header_inner_logo img{
+.header_page_inner_logo img{
     width: 45px;
     height: 45px;
     margin-left: 290px;
     margin-top: 5px;
 }
-.fixed{
+.header_fixed{
     position: fixed;
-    background: #3E6FA1;
+    background: #00B956;
     width: 100%;
 
+}
+.clock{
+    position: absolute;
+    right: 0;
+    margin: 5px 10px;
 }
 
 

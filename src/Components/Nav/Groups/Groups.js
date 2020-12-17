@@ -2,16 +2,16 @@ import React from 'react'
 import classes from './Groups.module.css'
 import MyGroup from '../Groups/MyGroup/MyGroup'
 
-const Groups =(props)=>{
-    const elementGroup = props.groups.map((el,index)=>
-        <MyGroup name={el.name} ava={el.ava} category={el.category} number={el.num} key={index}/>)
+const Groups = (props) => {
+    const elementGroup = props.groups.map((el, index) =>
+        <MyGroup name={el.name} avatarGroup={el.ava} category={el.category} number={el.num} key={index}/>)
 
-    return(
+    return (
 
-        <div className={classes.Groups}>
+        <div className={classes.groups}>
 
             <div>
-                <div className={classes.inp}><input type="text" defaultValue='Поиск сообществ'/></div>
+                <div className={classes.group_search}><input type="text" defaultValue='Поиск сообществ'/></div>
                 {elementGroup}
             </div>
 

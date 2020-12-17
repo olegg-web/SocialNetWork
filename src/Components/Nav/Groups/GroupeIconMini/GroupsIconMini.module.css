@@ -5,7 +5,7 @@
     margin-bottom: 10px;
     margin-left: 10px;
 }
-.ava_group img{
+.group_avatar img{
     width: 40px;
     height: 40px;
     object-fit: cover;
@@ -14,10 +14,10 @@
 .blockMiniTwo{
     padding-left: 10px;
 }
-.name_group{
+.group_name{
     font-size: 12.5px;
 }
-.category_group{
+.group_category{
     font-size: 12px;
     color: #656565;
 }

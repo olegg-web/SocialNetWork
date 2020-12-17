@@ -5,18 +5,14 @@ const MyGroup = (props) => {
 
     return (
         <div className={classes.every_group}>
-            <div className={classes.photo_group}>
-                <a href=""><img src={props.ava}  alt=""/></a>
-
+            <div className={classes.every_group_photo}>
+                <a href=""><img src={props.avatarGroup} alt=""/></a>
             </div>
             <div>
-                <div className={classes.name_group}>{props.name}</div>
-                <div className={classes.category_group}>{props.category}</div>
-                <div className={classes.number_group}>{props.number}</div>
+                <div className={classes.group_name}>{props.name}</div>
+                <div className={classes.group_category}>{props.category}</div>
+                <div className={classes.group_number}>{props.number}</div>
             </div>
-
-
-
         </div>
     )
 }
