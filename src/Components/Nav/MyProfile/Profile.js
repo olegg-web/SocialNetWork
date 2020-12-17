@@ -14,7 +14,7 @@ class Profile extends React.Component {
             textStart: 'Показать подробная информация',
             show: false,
             showBlock: null,
-
+            // xxx:classes.profile_info
         }
     }
 
@@ -45,7 +45,6 @@ class Profile extends React.Component {
             return day + ' ' + arrMount[cutNum - 1] + ' ' + year
 
         }// дата в формате ДД.ММ.ГГ
-
         const pushBlock = () => {
 
             if (this.state.textStart === 'Показать подробная информация') {
@@ -58,8 +57,7 @@ class Profile extends React.Component {
                             education={this.props.userInfo.info.education}/>
                 })
             } if (this.state.textStart === 'Скрыть подробную информацию') {
-                this.setState({textStart: 'Показать подробная информация', showBlock: null})
-
+                this.setState({textStart: 'Показать подробная информация', showBlock: null })
             }
         }// скрыть/показать блок информации
 
@@ -139,8 +137,7 @@ class Profile extends React.Component {
                 </div>
 
                 <div className={classes.rightBlock}>
-                    <div className={classes.profile_info}>
-
+                    <div className={classes.profile_info2}>
                         <div
                             className={classes.nameUserName}>{this.props.userInfo.info.name} {this.props.userInfo.info.surname}</div>
                         <input type="text" className={classes.status} defaultValue='изменить статус'/>
@@ -164,6 +161,7 @@ class Profile extends React.Component {
                         </div>
 
                         <div className={classes.arrowDown} onClick={pushBlock}>{this.state.textStart}</div>
+
 
                     </div>
                     <div>{this.state.showBlock}</div>

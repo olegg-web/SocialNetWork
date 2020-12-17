@@ -1,5 +1,4 @@
-import React from "react";
-import {renderEntire} from "../Render";
+
 
 let state = {
     navLink: [
@@ -95,7 +94,7 @@ let state = {
 
     }
 }
- export let addPost = ()=>{
+ export const addPost = ()=>{
     let newPost ={
         id:5,
         message:state.post.newPostText,
@@ -106,10 +105,15 @@ let state = {
     state.post.postData.unshift(newPost);
      renderEntire(state);
 }
-export let updateNewPost = (newText)=>{
+export const updateNewPost = (newText)=>{
     state.post.newPostText = newText;
     renderEntire(state);
 }
-
+let renderEntire =()=>{
+    
+}
+export let subscribe=(observer)=>{
+    renderEntire=observer
+}
 
 export default state

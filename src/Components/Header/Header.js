@@ -9,7 +9,8 @@ const Header = () => {
                 <div className={classes.header_fixed}>
                 <div className={classes.header_page_inner}>
                     <div className={classes.header_page_inner_logo}>
-                        <img src="img/message.png" alt="logo"/>
+                        <a href="/profile"><img src="img/message.png" alt="logo"/></a>
+
                     </div>
                     <div className={classes.clock}>
                         <Clock/>
